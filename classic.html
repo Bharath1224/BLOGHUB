@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic-BlogHub</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ebbc1aa60f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+:root {
+    --primary: #111;
+    --secondary: hsl(200, 56%, 78%);
+    --bg: #F0F8FF;
+    --border: #aaa;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  scroll-behavior: smooth ;
+  background-color: #010213;
+  color: white;
+}
+
+header{
+  position: relative;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+  }
+
+.logo img {
+    width: 60px; /* Adjust the width of the logo as needed */
+    height: auto;
+    margin-right: 20px; /* Adjust the margin between logo and company name */
+  }
+
+  h3 {
+  text-align: center;
+  font-size: 2.95em;
+  line-height: 1.2;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #fff;
+  padding: 20px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.header .navigation li a:hover
+{
+    border-bottom: 2px solid var(--secondary);
+}
+.banner
+{
+    margin: 20px 0px;   
+}
+.banner swiper-container 
+{
+    width: 100%;
+    height: 80vh;
+  }
+
+swiper-slide 
+  {
+    text-align: center;
+    font-size: 18px;
+    background: #010213;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+swiper-slide .imgbx img 
+  {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%)
+  }
+swiper-slide .text
+  {
+    position: absolute;
+    color: #fff;
+    top: 70%;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+section
+  {
+    padding: 40px 30px;
+  }
+
+.news
+{
+    text-align: center;
+}
+.news .titletext
+{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.news .titletext span
+{
+    color: var(--secondary);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-block: 2rem;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    gap: 2rem;
+    background: var(--bg);
+    border-radius: 20px;
+    padding: 50px 0px;
+    background: linear-gradient(
+    90deg,
+    hsl(237, 31%, 45%),
+    hsl(237, 16%, 48%),
+    hsl(200, 56%, 78%)
+    
+  );
+  }
+  
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: #010213;
+  }
+  
+  .card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  
+  
+  .tag {
+    align-self: flex-start;
+    padding: .25em .75em;
+    border-radius: 1em;
+    font-size: .75rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: white;
+    color: #0c041b;
+  }
+  
+  .tag + .tag {
+    margin-left: .5em;
+  }
+  
+  .card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
+  
+  .card__footer {
+    display: flex;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  
+  .user {
+    display: flex;
+    gap: .5rem;
+  }
+  
+  .user__image {
+    border-radius: 50%;
+  }
+  
+  .user__info > small {
+    color: #666;
+  }
+
+.events
+{
+    text-align: center;
+}
+.events .titletext
+{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.events .titletext span
+{
+    color: var(--secondary);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.jobs
+{
+    text-align: center;
+}
+.jobs .titletext
+{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.jobs .titletext span
+{
+    color: var(--secondary);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}   
+.register
+{
+    text-align: center;
+    border-top: 1px solid var(--border);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.register .titletext
+{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.register .titletext span
+{
+    color: var(--secondary);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}  
+
+
+
+.strip
+{
+    background: var(--secondary);
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.strip h1
+{
+    color:black;
+    font-weight: 300;
+}
+.strip .icons a{
+    color: #fff;
+}
+.alert {
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    background: var(--secondary);
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    padding: 20px;
+    width: 300px;
+    height: 100vh;
+    border-radius: 10px;
+    transform: translateX(150%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 2;
+}
+.alert .navigation1
+{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    list-style: none;
+    text-align: center;
+}
+.alert .navigation1 li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+.alert p {
+    margin: 30px;
+    letter-spacing: 1px;
+}
+
+.alert i {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+}
+.register .form .btn
+{
+    margin-top: 10px;
+    border: none;
+    padding: 10px 30px;
+    background: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+@media(max-width: 911px){
+    .header
+    {
+        display: none;
+    }
+    .top .search .hamburger
+    {
+        display: block;
+    }   
+    .register .form
+    {
+        margin: 0 0;
+    }
+    swiper-slide .imgbx img {
+        height: 100vh;
+    }
+    .top .search{
+        display: flex;
+        justify-content: space-between;
+    }
+    .top
+    {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background: #fff;
+        width: 100%;
+    }
+    .banner
+    {
+    margin: 0px 0px;   
+    }
+    .form
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <header>
+        <input type="checkbox" id="toggle" />
+          <div class="flex justify-content-between align-items-center gap-10 containerr">
+            <div class="logo">
+              <img src="logo.png" alt="Logo">
+              <a href="index.html"><h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+              font-size: 40px;
+              color: #fff;" >BlogHub</h1></a>
+            </div>
+            <div>
+              <ul class="flex flex-sm linkk">
+                <li><a href="#banner" class="link">HOME</a></li>
+                <li><a href="#news" class="link">NEWS_FEED</a></li>
+                <li><a href="#events" class="link">UPCOMING_EVENTS</a></li>
+                <li><a href="#jobs" class="link">JOBS</a></li>
+              </ul>
+            </div>
+            <div>
+              <label for="toggle">
+                <img src="icon-hamburger.svg" alt="toggle" />
+              </label>
+            </div>
+            <div>
+              <ul class="flex flex-sm gap-10">
+                <a href="create.html">
+                  <button>CREATE</button>
+                </a>
+              </ul>
+            </div>
+            
+          </div>
+    </header>
+
+        <h3>"Blogging is not rocket science, it’s about being yourself and putting what you have into it."</h3>
+
+        <div>
+          <ul class="flex flex-sm gap-10" style="justify-content: center; text-align: center; margin-bottom: 20px;">
+            <a href="create.html">
+              <button>CREATE YOUR BLOG</button><br>
+            </a>
+          </ul>
+        </div>
+  
+
+        <div class="banner" id="banner">
+          <swiper-container class="mySwiper" navigation="true">
+              <swiper-slide>
+                  <div class="imgbx">
+                      <a href="#news"><img src="https://i.postimg.cc/dtLWZmwx/pexels-cottonbro-studio-9656754.jpg"
+                              alt="News Feed"></a>
+                  </div>
+                  <div class="text">
+                      <h1 style="font-weight: bold;">NEWS FEEDS</h1>
+                      <h2>In the age of information , Ignorance is a choice.</h2>
+                  </div>
+              </swiper-slide>
+              <swiper-slide>
+                  <div class="imgbx">
+                      <a href="#news"><img src="https://i.postimg.cc/L8N4npDS/pexels-miguel-acosta-1259626.jpg" alt="Upcoming Events"></a>
+                  </div>
+                  <div class="text">
+                      <h1 style="font-weight: bold;">UPCOMING EVENTS</h1>
+                      <h2>Every new beginning comes from some other beginning's end</h2>
+                  </div>
+              </swiper-slide>
+              <swiper-slide>
+                  <div class="imgbx">
+                      <a href="#news"><img src="https://i.postimg.cc/8k27SNKn/pexels-arthouse-studio-4413745.jpg" alt="Available Jobs"></a>
+                  </div>
+                  <div class="text">
+                      <h1 style="font-weight: bold;">AVAILABLE JOBS</h1>
+                      <h2>The only way to do great work is to love what you do.</h2>
+                  </div>
+              </swiper-slide>
+          </swiper-container>
+      </div>
+
+   
+    <!--NEWS SECTION-->
+    <section class="news" id="news">
+        <div class="titletext">
+            <h1>News <span>Feed</span></h1>
+        </div>
+        <div class="container">
+            <a href="index.html"><div class="card">
+              <div class="card__header">
+                <img src="./classic/smarthelmet.jpg" alt="Trending Tech Product" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">News</span>
+                <h4>Trending Tech Product</h4>
+                <p>A Smart Helmet with SOS alerts + more product designs that emerged as the tech trends of May! - Yanko Design</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="./classic/Thiru.jpg" alt="THIRUMENI MALLIESWARAN" class="user__image" width="40px">
+                  <div class="user__info">
+                    <h5>THIRUMENI MALLIESWARAN</h5>
+                    <small>1h ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+            <div class="card">
+              <div class="card__header">
+                <img src="./classic/AI.jpg" alt="Newly Introduced AI Model" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">News</span>
+                <h4>Newly Introduced AI Model</h4>
+                <p>Real World Meets Virtual World? Meta To Introduce Mixed Reality Soon</p>
+                <p>It will enable a simulated world that includes completely realistic VR and AR experiences</p>
+                <p>XAI uses various techniques that makes it one of the most unique models among all new technologies in AI</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="./classic/bharath.jpg" alt="BHARATH MANIKANDAN" class="user__image" width="40px">
+                  <div class="user__info">
+                    <h5>BHARATH MANIKANDAN</h5>
+                    <small>8h ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <img src="./classic/IT.jpg" alt="Recent Trends In IT" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">News</span>
+                <h4>Recent Trends In IT</h4>
+                <p>How Different Industries Embrace Cloud Computing? – India's Best Cloud Hosting Service Provider</p>
+                <p>There are even more cloud trends such as Blockchain, Cloud Gaming, Quantum Computing, etc that becoming popular</p>
+                <p>3D printing is a set of technologies that allow objects to be created without the need for molds or minimums</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="./classic/barani.jpg" alt="BARANI IYYAPPAN" class="user__image" width="40px">
+                  <div class="user__info">
+                    <h5>BARANI IYYAPPAN</h5>
+                    <small>Yesterday</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card__header">
+                  <img src="./classic/games.jpg" alt="Top Grossing Video Games" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">News</span>
+                  <h4>Top Grossing Video Games</h4>
+                  <p>With advancements in technology such as virtual reality (VR), augmented reality (AR), and realistic graphics, players can now dive into incredibly detailed and lifelike gaming worlds like never before.</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/dhanush.jpg" alt="DHANUSH MS" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>DHANUSH MS</h5>
+                      <small>2d ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <img src="./classic/market.jpg" alt="Market Crises" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">News</span>
+                  <h4>Market Crises</h4>
+                  <p>Everyone's mind always wonder how do Millionaires Trader Thinks ?</p>
+                  <p>Surround yourself with big dreamers and doers, as the size of your dream determines the amount you can accomplish</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/logesh.jpg" alt="LOGESH SIVANMALAI" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>LOGESH SIVANMALAI</h5>
+                      <small>5d ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <img src="./classic/2024.jpg" alt="What's New In 2024 Tech" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag tag-blue">News</span>
+                  <h4>What's new in 2024 Tech</h4>
+                  <p>Even at this early stage, the list of AI-powered products slated for a 2024 debut include cars, robots of all kinds, health and accessibility tools, and even electric bikes</p>
+                  <p>Whether any of this stuff is worth using remains to be seen, but be ready to hear about AI gadgets for the rest of the year — and surely beyond</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/saravanan.jpg" alt="SARAVANAKUMAR PKP" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>SARAVANAKUMAR PKP</h5>
+                      <small>Lask week</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </section>
+    <!--EVENTS SECTION-->
+    <section class="events" id="events">
+        <div class="titletext">
+            <h1>Upcoming <span>Events</span></h1>
+        </div>
+        <div class="container">
+            <div class="card">
+              <div class="card__header">
+                <img src="./classic/conference.jpg" alt="Conference Meeting" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">Events</span>
+                <h4>Conference Meeting</h4>
+                <p>Conferences are becoming opportunities for global collaboration, with participants and speakers joining from different parts of the world. This not only diversifies perspectives but also promotes international networking and knowledge exchange.</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="./classic/Thiru.jpg" alt="user__image" class="user__image" width="40px">
+                  <div class="user__info">
+                    <h5>THIRUMENI MALLIESWARAN</h5>
+                    <small>1h ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <img src="./classic/talk.jpeg" alt="Talk Show Shoot" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">Events</span>
+                <h4>Talk Show Shoot</h4>
+                <p>If possible, share insights into any guest interviews. Discuss the atmosphere during interviews, any unexpected moments, and the overall dynamics between the host and guests</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="./classic/bharath.jpg" alt="user__image" class="user__image" width="40px">
+                  <div class="user__info">
+                    <h5>BHARATH MANIKANDAN</h5>
+                    <small>8h ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <img src="./classic/farewell.jpeg" alt="Farewell Function" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">Events</span>
+                <h4>Farewell Function</h4>
+                <p>Organizing a farewell party can be a heartfelt and memorable way to bid farewell to a colleague, friend, or loved one who is embarking on a new journey</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="./classic/barani.jpg" alt="user__image" class="user__image" width="40px">
+                  <div class="user__info">
+                    <h5>BARANI IYYAPPAN</h5>
+                    <small>Yesterday</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card__header">
+                  <img src="./classic/dj.jpeg" alt="DJ Night" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">Events</span>
+                  <h4>DJ Night</h4>
+                  <p>Bass so heavy, it's in the DNA. Let's drop the beat!</p>
+                  <p>Dance 'til the sun comes up, then dance some more. #NoSleep</p>
+                  <p>When life gives you beats, dance like nobody's watching</p>
+                  <p>DJ in the mix, and sanity out the door. Welcome to the crazy zone</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/dhanush.jpg" alt="user__image" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>DHANUSH MS</h5>
+                      <small>2d ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <img src="./classic/show.webp" alt="Talk Show" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">Events</span>
+                  <h4>Talk Show</h4>
+                  <p>Talk Show Shenanigans: Where Serious Meets Silly!</p>
+                  <p>Mic in one hand, coffee in the other – it's talk show time!</p>
+                  <p>Buckle up, it's a talk show rollercoaster!</p>
+                  <p>Mic Drop Zone: Enter if you dare!</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/logesh.jpg" alt="user__image" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>LOGESH SIVANMALAI</h5>
+                      <small>5d ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <img src="./classic/motivational.jpg" alt="Motivational Talks" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag tag-blue">Events</span>
+                  <h4>Motivational Talks</h4>
+                  <p>Motivational speeches are a powerful way to encourage reflection and influence convictions by appealing to emotions</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/saravanan.jpg" alt="user__image" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>SARAVANAKUMAR PKP</h5>
+                      <small>Lask week</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </section>
+     <!--JOBS SECTION-->
+    <section class="jobs" id="jobs">
+        <div class="titletext">
+            <h1>Available <span>Jobs</span></h1>
+        </div>
+        <div class="container">
+            <div class="card">
+              <div class="card__header">
+                <img src="./classic/civil.jpg" alt="Civil Engineers" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">Jobs</span>
+                <h4>Civil Engineers</h4>
+                <p>With a growing global focus on infrastructure development, civil engineers play a crucial role in designing and implementing projects that enhance a community's infrastructure, such as water supply systems, sewage treatment plants, and more.</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="./classic/Thiru.jpg" alt="THIRUMENI MALLIESWARAN" class="user__image" width="40px">
+                  <div class="user__info">
+                    <h5>THIRUMENI MALLIESWARAN</h5>
+                    <small>1h ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <img src="./classic/data.webp" alt="Data Analyst" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">Jobs</span>
+                <h4>Data Analyst</h4>
+                <p>Data analysts play a crucial role in solving complex business problems by analyzing and interpreting data, making their problem-solving skills highly valued by employers.</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="./classic/bharath.jpg" alt="BHARATH MANIKANDAN" class="user__image" width="40px">
+                  <div class="user__info">
+                    <h5>BHARATH MANIKANDAN</h5>
+                    <small>8h ago</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <img src="./classic/web.webp" alt="Web Designer" class="card__image" width="600">
+              </div>
+              <div class="card__body">
+                <span class="tag">Jobs</span>
+                <h4>Web Designer</h4>
+                <p>With the increasing importance of online presence for businesses, there is a growing demand for web designers who can create visually appealing and user-friendly websites.</p>
+              </div>
+              <div class="card__footer">
+                <div class="user">
+                  <img src="./classic/barani.jpg" alt="BARANI IYYAPPAN" class="user__image" width="40px">
+                  <div class="user__info">
+                    <h5>BARANI IYYAPPAN</h5>
+                    <small>Yesterday</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+                <div class="card__header">
+                  <img src="./classic/ca.jpeg" alt="Charted Accountant" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">Jobs</span>
+                  <h4>Charted Accountant</h4>
+                  <p>Chartered Accountants (CAs) have a wide range of career opportunities across various industries, including finance, audit, taxation, consulting, and advisory services.</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/dhanush.jpg" alt="DHANUSH MS" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>DHANUSH MS</h5>
+                      <small>2d ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <img src="./classic/secretary.jpg" alt="Company Secretary" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">Jobs</span>
+                  <h4>Company Secretary</h4>
+                  <p>Company Secretaries facilitate board meetings and annual general meetings (AGMs), preparing agendas, recording minutes, and ensuring that decisions are documented appropriately.</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/logesh.jpg" alt="LOGESH SIVANMALAI" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>LOGESH SIVANMALAI</h5>
+                      <small>5d ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <img src="./classic/dataengineer.jpg" alt="Data Engineer" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag tag-blue">Jobs</span>
+                  <h4>Data Engineer</h4>
+                  <p>Data engineers are responsible for designing, constructing, and maintaining the architecture (pipelines, databases, large-scale processing systems) that allows for the efficient storage and retrieval of data.</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/saravanan.jpg" alt="SARAVANAKUMAR PKP" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>SARAVANAKUMAR PKP</h5>
+                      <small>Lask week</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </section>
+    
+
+    <script>
+        $(document).ready(function(){
+    $(".on").click(function() {
+        $('.alert').css({
+            'transform': 'translateX(0)',
+        });
+    });
+    
+    $(".close").click(function() {
+        $('.alert').css({
+            'transform': 'translateX(150%)',
+        });
+    });
+
+    $(".out").click(function(){
+        $('.alert').css({
+            'transform': 'translateX(150%)',
+        });
+    })
+})
+
+$(document).ready(function(){
+    $(".on").click(function() {
+        $('.alert').css({
+            'transform': 'translateX(0)',
+        });
+    });
+    
+    $(".close").click(function() {
+        $('.alert').css({
+            'transform': 'translateX(150%)',
+        });
+    });
+
+    $(".out").click(function(){
+        $('.alert').css({
+            'transform': 'translateX(150%)',
+        });
+    })
+})
+
+
+
+ScrollReveal({ reset: true });
+        ScrollReveal().reveal('.banner', { easing:"ease-in", delay: 100});
+        ScrollReveal().reveal('.news', { easing: "ease-in", delay: 200});
+        ScrollReveal().reveal('.events', { easing: "ease-in", delay: 200});
+        ScrollReveal().reveal('.jobs', { easing: "ease-in", delay: 200});
+        ScrollReveal().reveal('.register', { easing: "ease-in", delay: 200});
+    </script>
+ 
+</body>
+</html>

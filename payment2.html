@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <title>Payment/Premium-BlogHub</title>
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Montserrat:wght@600&display=swap');
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #010213;
+    margin: 10px;
+    padding: 0;
+    justify-content: center;
+    align-items:center ;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+  }
+
+.logo img {
+    width: 60px; 
+    height: auto;
+    margin-right: 20px; 
+  }
+
+  .logo h2{
+    text-decoration: none; 
+    color: white;
+    font-size: 40px;
+  }
+
+.credit-card-form {
+  max-width: 400px;
+    margin: 10px auto;
+    padding: 40px;
+    background: linear-gradient(
+    90deg,
+    hsl(237, 31%, 45%),
+    hsl(237, 16%, 48%),
+    hsl(200, 56%, 78%)
+  );
+    color:#010213;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.credit-card-form h2 {
+  margin-bottom: 10%;
+  font-size: 24px;
+}
+
+label {
+    display: block;
+    color: #010213;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 96%;
+    height: 30px;
+    padding: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.form-group {
+  flex: 1;
+  margin-right: 10px; /* Adjust as needed */
+}
+
+/* Optional: Adjust label width or alignment */
+.form-group label {
+  width: 80px; /* Adjust width as needed */
+  text-align:center; /* Adjust alignment as needed */
+  margin-left: 10px;
+}
+
+
+
+button[type="submit"]{
+    background-color:#0c041b;
+    color: white;
+}
+
+button[type="submit"] {
+    width: 80%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+button[type="submit"]:hover{
+    background-color: #4CAF50;
+}
+
+p {
+  color: white;
+  margin-top: 6%;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 70%;
+  text-shadow: 0 0 5px #cacaca; 
+}
+
+.Image1 {
+  margin-top: 0;
+  width: 220px;
+}
+h1 {
+  margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    color:#010213;
+}
+.logo h1{
+    display: flex;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+ </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+    <a href="index.html" style="display: flex;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;"
+    ><h1 style="color: #fff;">BlogHub</h1></a>
+</div>
+
+    <div class="credit-card-form">
+        <h1>PAYMENT - PREMIUM</h1>
+        <img class="Image1" src="https://i.ibb.co/hgJ7z3J/6375aad33dbabc9c424b5713-card-mockup-01.png" alt="6375aad33dbabc9c424b5713-card-mockup-01" border="0">
+      
+        <form>
+
+          <label for="email">E-Mail Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your E-Mail Address" required><br><br>
+  
+          <label for="Mobile">Mobile Number</label>
+          <input type="text" id="Mobile" name="Mobile" placeholder="Enter your Mobile Number" required><br><br>
+
+          <label for="card-number">Card Number</label>
+          <input type="password" id="card-number" name="card-number" placeholder="Card number" required><br><br>
+
+          <label for="card-holder">Card Holder</label>
+          <input type="text" id="card-holder" name="card-holder" placeholder="Card holder's name" required><br><br>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expiry-date">Expiry_Date</label>
+              <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="password" id="cvv" name="cvv" placeholder="CVV" required><br><br>
+            </div>
+          </div>
+          
+        
+
+          <button type="submit" class="click-button" onclick="showLoading(event, this)">PAY NOW - ₹250</button><br><br><br>
+          <button type="submit" class="click-button" onclick="payWithUPI()">PAY WITH UPI</button>
+        </form>
+    </div>
+    
+    <script>
+        function showLoading(event, button) {
+            event.preventDefault(); // Prevent form submission
+    
+            button.innerHTML = "Processing Payment...";
+    
+            setTimeout(function() {
+                button.innerHTML = "Payment completed.";
+            }, 3000); // Change to the desired duration in milliseconds
+        }
+    
+        function payWithUPI() {
+            // Write your code to handle UPI payment here
+            alert("Redirecting to UPI payment gateway...");
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogHub</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/swiper.min.css">
+    <script src="path/to/swiper.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <input type="checkbox" id="toggle" />
+        <div class="flex justify-content-between align-items-center gap-10 containerr">
+          <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 40px;
+            color: #fff;" >BlogHub</h1>
+          </div>
+          <div>
+            <ul class="flex flex-sm linkk">
+              <li><a href="#" class="link">HOME</a></li>
+              <li><a href="#blog" class="link">BLOGS</a></li>
+              <li><a href="#price" class="link">PLANS&PRICING</a></li>
+              <li><a href="./Profile/Login.html" class="link">PROFILE</a></li>
+            </ul>
+          </div>
+          <div>
+            <label for="toggle">
+              <img src="icon-hamburger.svg" alt="toggle" />
+            </label>
+          </div>
+          <div>
+            <ul class="flex flex-sm gap-10">
+                <a href="free-blog.html"><button>Get Started</button></a>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="intro">
+          <h1 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 60px; font-style: normal; text-align: left;">Bloghub, Your Way</h1><br>
+          <h3>Build and grow your Blog with the best way to BlogHub.</h3>
+          <h3>Lightning-fast hosting, intuitive, flexible editing, and everything you need to grow your site and audience, baked right in.</h3><br>
+          <div>
+            <ul class="flex flex-sm gap-10">
+              <a href="free-blog.html" style="justify-content: center;"><button>Get Started</button></a>
+            </ul>
+          </div>
+        </div>
+
+        <section class="section slider-section">
+          <div class="container slider-column">
+            <div class="swiper swiper-slider">
+              <div class="swiper-wrapper">
+                <img class="swiper-slide" src="Slide/Bitcoin.jpg" alt="Bitcoin" onclick="goToNextPage()">
+                <img class="swiper-slide" src="./Slide/Beach.jpg" alt="Beach" onclick="goToNextPage()">
+                <img class="swiper-slide" src="./Slide/Car.jpg" alt="Car" onclick="goToNextPage()">
+                <img class="swiper-slide" src="./Slide/Cat.jpg" alt="Cat" onclick="goToNextPage()">
+                <img class="swiper-slide" src="./Slide/Cycling.jpg" alt="Cycling" onclick="goToNextPage()">
+                <img class="swiper-slide" src="./Slide/JD.jpg" alt="Jack Daniels" onclick="goToNextPage()">
+              </div>
+              <span class="swiper-pagination"></span>
+              <span class="swiper-button-prev"></span>
+              <span class="swiper-button-next"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Blog -->
+
+        <section class="news" id="blog">
+          <div class="titletext">
+              <h1 style="color: hsl(200, 56%, 78%); font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 60px;">BLOG</h1>
+          </div>
+          <div class="spacing">
+              <a href="cms.html"><div class="card">
+                <div class="card__header">
+                  <img src="./classic/smarthelmet.jpg" alt="Trending Tech Product" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">Blog</span>
+                  <h4>Trending Tech Product</h4>
+                  <p>A Smart Helmet with SOS alerts + more product designs that emerged as the tech trends of May! - Yanko Design</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/Thiru.jpg" alt="THIRUMENI MALLIESWARAN" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>THIRUMENI MALLIESWARAN</h5>
+                      <small>1h ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+              <div class="card">
+                <div class="card__header">
+                  <img src="./classic/AI.jpg" alt="Newly Introduced AI Model" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">Blog</span>
+                  <h4>Newly Introduced AI Model</h4>
+                  <p>Real World Meets Virtual World? Meta To Introduce Mixed Reality Soon</p>
+                  <p>It will enable a simulated world that includes completely realistic VR and AR experiences</p>
+                  <p>XAI uses various techniques that makes it one of the most unique models among all new technologies in AI</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/bharath.jpg" alt="BHARATH MANIKANDAN" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>BHARATH MANIKANDAN</h5>
+                      <small>8h ago</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__header">
+                  <img src="./classic/IT.jpg" alt="Recent Trends In IT" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                  <span class="tag">Blog</span>
+                  <h4>Recent Trends In IT</h4>
+                  <p>How Different Industries Embrace Cloud Computing? – India's Best Cloud Hosting Service Provider</p>
+                  <p>There are even more cloud trends such as Blockchain, Cloud Gaming, Quantum Computing, etc that becoming popular</p>
+                  <p>3D printing is a set of technologies that allow objects to be created without the need for molds or minimums</p>
+                </div>
+                <div class="card__footer">
+                  <div class="user">
+                    <img src="./classic/barani.jpg" alt="BARANI IYYAPPAN" class="user__image" width="40px">
+                    <div class="user__info">
+                      <h5>BARANI IYYAPPAN</h5>
+                      <small>Yesterday</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                  <div class="card__header">
+                    <img src="./classic/games.jpg" alt="Top Grossing Video Games" class="card__image" width="600">
+                  </div>
+                  <div class="card__body">
+                    <span class="tag">Blog</span>
+                    <h4>Top Grossing Video Games</h4>
+                    <p>With advancements in technology such as virtual reality (VR), augmented reality (AR), and realistic graphics, players can now dive into incredibly detailed and lifelike gaming worlds like never before.</p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="user">
+                      <img src="./classic/dhanush.jpg" alt="DHANUSH MS" class="user__image" width="40px">
+                      <div class="user__info">
+                        <h5>DHANUSH MS</h5>
+                        <small>2d ago</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card__header">
+                    <img src="./classic/market.jpg" alt="Market Crises" class="card__image" width="600">
+                  </div>
+                  <div class="card__body">
+                    <span class="tag">Blog</span>
+                    <h4>Market Crises</h4>
+                    <p>Everyone's mind always wonder how do Millionaires Trader Thinks ?</p>
+                    <p>Surround yourself with big dreamers and doers, as the size of your dream determines the amount you can accomplish</p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="user">
+                      <img src="./classic/logesh.jpg" alt="LOGESH SIVANMALAI" class="user__image" width="40px">
+                      <div class="user__info">
+                        <h5>LOGESH SIVANMALAI</h5>
+                        <small>5d ago</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card__header">
+                    <img src="./classic/2024.jpg" alt="What's New In 2024 Tech" class="card__image" width="600">
+                  </div>
+                  <div class="card__body">
+                    <span class="tag tag-blue">Blog</span>
+                    <h4>What's new in 2024 Tech</h4>
+                    <p>Even at this early stage, the list of AI-powered products slated for a 2024 debut include cars, robots of all kinds, health and accessibility tools, and even electric bikes</p>
+                    <p>Whether any of this stuff is worth using remains to be seen, but be ready to hear about AI gadgets for the rest of the year — and surely beyond</p>
+                  </div>
+                  <div class="card__footer">
+                    <div class="user">
+                      <img src="./classic/saravanan.jpg" alt="SARAVANAKUMAR PKP" class="user__image" width="40px">
+                      <div class="user__info">
+                        <h5>SARAVANAKUMAR PKP</h5>
+                        <small>Lask week</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+      </section>
+
+      <!-- Pricing tag -->
+      <section class="pricingtag" id="price">
+        <h1 class="demo-title">PLANS & <span>PRICING</span></h1>
+        <div class="pricing-grid">
+
+          <div class="left plan plan1" style="background: linear-gradient(
+            90deg,
+            hsl(237, 31%, 45%),
+            hsl(237, 16%, 48%),
+            hsl(200, 56%, 78%)
+            
+          );">
+            <a href="free-blog.html" style="background: linear-gradient(
+              90deg,
+              hsl(237, 31%, 45%),
+              hsl(237, 16%, 48%),
+              hsl(200, 56%, 78%)
+            ); color: #010213;">
+              <h1>FREE</h1><br>
+              <p>Get a taste of the world’s most popular CMS & blogging software.</p>
+              <div class="center">
+                <ul class="features">
+                  <li>Interesting Blogs</li>
+                  <li>50 Blogs</li>
+                  <li>1 E-Mail Account</li>
+                </ul>
+              </div>
+            </a>
+            <p class="price">₹0</p>
+            <a class="cta" href="free-blog.html">EXPLORE</a>
+          </div>
+    
+          <div class="plan plan2" style="background: linear-gradient(
+            90deg,
+            hsl(237, 31%, 45%),
+            hsl(237, 16%, 48%),
+            hsl(200, 56%, 78%)
+          );">
+            <a href="classic.html" style="background: linear-gradient(
+              90deg,
+              hsl(237, 31%, 45%),
+              hsl(237, 16%, 48%),
+              hsl(200, 56%, 78%)
+            ); color: #010213;">
+              <h1>CLASSIC</h1>
+              <p>Explore the News,Events,jobs related blogs and Creating specifications</p>
+              <ul class="features">
+                <li>Creation mode</li>
+                <li>1000+ Blogs</li>
+                <li>10 E-Mail Accounts</li>
+                <li></li>
+              </ul>
+            </a>
+            <p class="price">₹1000</p>
+            <a class="cta" href="payment1.html">UPGRADE A PRO</a>
+          </div>
+    
+          <div class="right plan plan3" style="background: linear-gradient(
+            90deg,
+            hsl(237, 31%, 45%),
+            hsl(237, 16%, 48%),
+            hsl(200, 56%, 78%)
+            
+          );">
+          <a href="#" style="background: linear-gradient(
+            90deg,
+            hsl(237, 31%, 45%),
+            hsl(237, 16%, 48%),
+            hsl(200, 56%, 78%)
+          ); color: #010213;">
+            <h1>PREMIUM</h1>
+            <p>Explore the Premium blogs typically offer high-quality, well-researched content</p>
+            <ul class="features">
+              <li>Famous Blogs</li>
+              <li>250 Blogs</li>
+              <li>5 E-Mail Accounts</li>
+            </ul>
+          </a>
+            <p class="price">₹250</p>
+            <a class="cta" href="payment2.html">GO PREMIUM</a>
+          </div>
+        </div>
+      </section>
+
+      
+
+
+      </main>
+
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+
+// nextpage
+      function goToNextPage() {
+        window.location.href = 'free-blog.html';
+      }
+
+
+// swiper
+    const swiper = new Swiper(".swiper-slider", {
+      centeredSlides: true,
+      slidesPerView: 1,
+      grabCursor: true,
+      freeMode: false,
+      loop: true,
+      mousewheel: false,
+      keyboard: {
+        enabled: true
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: false,
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 1.25,
+          spaceBetween: 20
+        },
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        }
+      }
+    });
+
+
+
+  </script>
+        
+
+</body>
+</html>
