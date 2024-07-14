@@ -58,7 +58,15 @@ header{
   margin-right: 10px;
 }
 
-
+@media screen and (max-width: 768px){
+  h3{
+    font-size: 1.5em;
+  }
+  button{
+    margin-right: 40px;
+  }
+  
+}
 .header .navigation li a:hover
 {
     border-bottom: 2px solid var(--secondary);
@@ -203,6 +211,12 @@ section
   .user__info > small {
     color: #666;
   }
+
+  @media screen and (max-width: 768px) {
+      section {
+        padding: .3rem;
+      }
+    }
 
 .events
 {
@@ -394,7 +408,7 @@ section
               </label>
             </div>
             <div>
-              <ul class="flex flex-sm gap-10">
+              <ul class="flex flex-sm gap-10 but">
                 <a href="create.html">
                   <button>CREATE</button>
                 </a>
@@ -455,7 +469,7 @@ section
             <h1>News <span>Feed</span></h1>
         </div>
         <div class="container">
-            <a href="index.html"><div class="card">
+            <div class="card">
               <div class="card__header">
                 <img src="./classic/smarthelmet.jpg" alt="Trending Tech Product" class="card__image" width="600">
               </div>
@@ -474,7 +488,6 @@ section
                 </div>
               </div>
             </div>
-          </a>
             <div class="card">
               <div class="card__header">
                 <img src="./classic/AI.jpg" alt="Newly Introduced AI Model" class="card__image" width="600">
