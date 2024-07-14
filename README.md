@@ -52,19 +52,5 @@ Features
             Access to famous blogs
             250 curated Blogs
             5 E-Mail Accounts
-          Price: ₹250
-    
-    Installation
-      To view the BlogHub static front-end project locally:
-      
-      1. Clone the repository
-        git clone https://github.com/Thirumeni2811/bloghub.git
-      2. Navigate to the project directory:
-        cd bloghub
-      3. Open index.html in your preferred web browser.
-
-    Contributing
-        We welcome contributions to enhance BlogHub! If you have ideas for new features or improvements, feel free to open an issue or submit a pull request.
-        
-    License
-        This project is licensed under the MIT License. See the LICENSE file for more details.
+          Price: ₹250 
+   
